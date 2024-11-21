@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Вывод fetch_api.txt</title>
+    </head>
+    <body>
+        <h1>Содержание файла:</h1>
+        <div id="content">load...</div>
+        <script>
+            window.onload = function() {
+                fetch('fetch_api.txt').then(Response =>{
+                    if(!Response.ok) {
+                        throw new Error(`Ошибка: ${Response.status}`);
+                    }
+                    return Response.text();
+                })
+                .then(data => {
+                document.getElementById('content').innerText= data;
+            })
+            .catch(Error => {
+                document.getElementById('content').innerText= 'Ошибка при загрузке: ' + Error.message;
+            });
+            };
+        </script>
+    </body>
+</html>

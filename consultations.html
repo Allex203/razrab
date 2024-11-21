@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Твое имя">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Консультации - Как списать без палева</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center; /* Центрируем меню */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="consultations.html">Консультации</a></li>
+                <li><a href="tariffs.html">Тарифы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Регистрация</a>
+                    <div class="dropdown-content">
+                        <a href="Registr.html">Зарегистрироваться</a>
+                        <a href="login.html">Войти</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="consultation-info"></br>
+            <h1>Консультации по списыванию</h1>
+            <p>Наши эксперты готовы предоставить вам персонализированные консультации и курсы по эффективным методам списывания:</p>
+            <ul>
+                <li>Списывание с использованием смартфона</li>
+                <li>Как быстро находить ответы в интернете</li>
+                <li>Методы незаметного использования шпаргалок</li>
+                <li>Как эффективно работать в группах</li>
+            </ul>
+            <p>Запишитесь на консультацию с одним из наших специалистов, и мы научим вас, как эффективно справляться с учебными заданиями без палев.</p>
+
+            <a href="index.html" class="back-to-home">Вернуться на главную</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Как списать без палева. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>

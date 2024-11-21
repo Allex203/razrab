@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* Стили для навигации */
+            nav {
+                background-color: #333;
+                padding: 10px 0; /* Добавляем отступ сверху и снизу */
+                display: flex;
+                justify-content: center; /* Центрируем меню */
+            }
+    
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                gap: 20px; /* Расстояние между элементами */
+            }
+    
+            nav li {
+                position: relative; /* Для выпадающего меню */
+            }
+    
+            nav a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px; /* Увеличиваем зону клика */
+                display: block;
+                font-size: 16px; /* Устанавливаем единый размер текста */
+                border-radius: 4px; /* Легкое скругление */
+                transition: background-color 0.3s ease;
+            }
+    
+            nav a:hover {
+                background-color: #575757;
+            }
+    
+            /* Стили для выпадающего меню */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #444;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                min-width: 160px;
+                border-radius: 4px; /* Скругление углов */
+            }
+    
+            .dropdown-content a {
+                color: white;
+                padding: 10px;
+                text-decoration: none;
+                display: block;
+            }
+    
+            .dropdown-content a:hover {
+                background-color: #575757;
+            }
+    
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style></head></br></br></br></br>
+        <script>
+            function changeColor() {
+                var randomColor = '#' + Math.floor(Math.random()*16777251).toString(16);
+                document.body.style.backgroundColor = randomColor;
+                document.getElementById("colorCode").innerText = "Цвет фона: " + randomColor;
+            }
+            function startColorChange() {
+                setInterval(changeColor,2000);
+            }
+        </script>
+    </head>
+    <body onload="startColorChange()"><header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="consultations.html">Консультации</a></li>
+                <li><a href="tariffs.html">Тарифы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Регистрация</a>
+                    <div class="dropdown-content">
+                        <a href="Registr.html">Зарегистрироваться</a>
+                        <a href="login.html">Войти</a>
+                        <li><a href="fetch.html">Fetch</a></li>
+                        <li><a href="rgb.html">RGB</a></li>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header></body>
+    <p id="colorCode"></p>
+    <a href="index.html" class="back-to-home">Вернуться на главную</a>
+</html>

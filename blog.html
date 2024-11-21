@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Твое имя">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - Как списать без палева</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center; /* Центрируем меню */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="consultations.html">Консультации</a></li>
+                <li><a href="tariffs.html">Тарифы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Регистрация</a>
+                    <div class="dropdown-content">
+                        <a href="Registr.html">Зарегистрироваться</a>
+                        <a href="login.html">Войти</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-posts"></br>
+            <h1>Наши советы по списыванию</h1>
+            <p>Здесь вы найдете самые лучшие и проверенные способы списывания без палев, советы по подготовке к экзаменам и много других интересных статей!</p>
+            
+            <div class="blog-post">
+                <h2>Как списывать на экзамене с помощью смартфона?</h2>
+                <p>Совсем не секрет, что смартфоны стали неотъемлемой частью нашей жизни. Почему бы не использовать их на экзаменах? Вот несколько способов...</p>
+                <a href="article.html" class="read-more">Читать статью</a>
+            </div>
+
+            <div class="blog-post">
+                <h2>Шпаргалки 2024: как сделать их незаметными?</h2>
+                <p>Классический метод, который не теряет своей актуальности — шпаргалки! Но как сделать их так, чтобы преподаватель не заметил?</p>
+                <a href="blog_post_2.html" class="read-more">Читать статью</a>
+            </div>
+
+            <div class="blog-post">
+                <h2>Как работать в группах на экзамене и не попасться?</h2>
+                <p>Групповое списывание — неотъемлемая часть многих экзаменов. Как организовать это дело так, чтобы никто не попался на горячем?</p>
+                <a href="group_work.html" class="read-more">Читать статью</a>
+            </div>
+
+            <div class="blog-post">
+                <h2>Лучшие способы использования интернета для быстрого поиска ответов</h2>
+                <p>Что делать, если у вас нет шпаргалок? Используйте интернет! Мы расскажем, какие ресурсы могут помочь вам на экзамене...</p>
+                <a href="blog_post_4.html" class="read-more">Читать статью</a>
+            </div>
+        </section>
+        
+        <a href="index.html" class="back-to-home">Вернуться на главную</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Как списать без палева. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>

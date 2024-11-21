@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Твое имя">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тарифы - Как списать без палева</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center; /* Центрируем меню */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="consultations.html">Консультации</a></li>
+                <li><a href="tariffs.html">Тарифы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Регистрация</a>
+                    <div class="dropdown-content">
+                        <a href="Registr.html">Зарегистрироваться</a>
+                        <a href="login.html">Войти</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tariffs-info"></br>
+            <h1>Наши тарифные планы</h1>
+            <p>Мы предлагаем три тарифа, которые помогут вам достичь учебных целей:</p>
+            <ul>
+                <li>
+                    <h3>Базовый</h3>
+                    <p>Доступ к бесплатным статьям и видеоруководствам. Подходит для начинающих!</p>
+                </li>
+                <li>
+                    <h3>Профессионал</h3>
+                    <p>Полный доступ ко всем материалам, включая эксклюзивные видео и методы списывания.</p>
+                </li>
+                <li>
+                    <h3>Эксперт</h3>
+                    <p>Получите персонализированные консультации, помощь на экзаменах и тренировки по тайм-менеджменту.</p>
+                </li>
+            </ul>
+            <p>Выберите план, который наилучшим образом соответствует вашим потребностям, и начните обучаться прямо сейчас!</p>
+
+            <a href="index.html" class="back-to-home">Вернуться на главную</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Как списать без палева. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>

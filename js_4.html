@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ex. 4 (js)</title>
+        <script>
+            function loadXMLDoc() {
+                var xhttp = new
+                XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        displayCDs(this);
+                    }
+                };
+                xhttp.open("GET", "https://www.3school.com/js/cd_catalog.xml", true);
+                xhttp.send();
+            }
+            function displayCDs(xml) {
+                var xmlDoc = xml.responseXML;
+                var table = <tr><th>Title</th><th>Artist</th></tr>;
+                var cds = xmlDoc.getElementsByTagName("CD");
+                for (var i=0; i < cds.length; i++) {
+                    table += "<tr><td>" + cds[i].getElementsByTagName("TITLE") [0].childNodes[0].nodeValue + "</td></tr>"; }
+                    document.getElementById("cdTable").innerHTML= table;
+                }
+        </script>
+    </head>
+    <body>
+        <h2>CD Catalog</h2>
+        <button type="button" onclick="loadXMLDoc()">Download CD</button>
+        <br><br>
+        <table id="cdTable"></table>
+    </body>
+</html>

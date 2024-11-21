@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <!-- Подключение внешнего файла стилей -->
+    <link rel="stylesheet" href="style.css"> <!-- Подключаем внешний CSS файл -->
+    
+    <style>
+        /* Общие стили для страницы */
+        body {
+            background-color: #f8f8f8; /* Цвет фона страницы */
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Стили для навигации */
+        nav {
+            background-color: #333; /* Черный фон меню */
+            padding: 10px 0; /* Отступы для меню */
+            display: flex;
+            justify-content: center; /* Центрируем меню */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px; /* Расстояние между элементами меню */
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            color: white; /* Белый текст */
+            text-decoration: none; /* Убираем подчеркивание у ссылок */
+            padding: 10px 20px; /* Увеличиваем зону клика */
+            border-radius: 4px; /* Скругление углов */
+            font-size: 16px; /* Размер текста */
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #575757; /* Серый фон при наведении */
+        }
+
+        /* Стили для выпадающего меню */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444; /* Темный фон для выпадающего меню */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 4px; /* Скругленные углы */
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            color: white; /* Белый текст */
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757; /* Серый фон при наведении */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Стили для формы регистрации */
+        .registration-form {
+            background-color: #fff; /* Цвет фона формы */
+            width: 320px; /* Ширина формы */
+            padding: 15px; /* Внутренний отступ формы */
+            border-radius: 8px; /* Скругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+            margin: 50px auto;
+        }
+
+        .registration-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .registration-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .registration-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1cbc11;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .registration-form button:hover {
+            background-color: #14a20a;
+        }
+
+        /* Добавляем отступ для регистрации в меню */
+        nav .dropdown {
+            margin-left: 50px; /* Отступ слева для пункта "Регистрация" */
+        }
+    </style>
+</head>
+<body>
+</br></br>
+    <!-- Навигация -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="consultations.html">Консультации</a></li>
+                <li><a href="tariffs.html">Тарифы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <!-- Убрали пункт "Контакты" -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Курсы</a>
+                    <div class="dropdown-content">
+                        <a href="courses.html">Все курсы</a>
+                        <a href="new_courses.html">Новые курсы</a>
+                        <a href="popular_courses.html">Популярные курсы</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Регистрация</a>
+                    <div class="dropdown-content">
+                        <a href="signup.html">Зарегистрироваться</a>
+                        <a href="login.html">Войти</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Форма регистрации -->
+    <div class="registration-form">
+        <h2>Регистрация</h2>
+        <form action="#" method="post">
+            <input type="text" name="username" placeholder="Имя пользователя" required>
+            <input type="email" name="email" placeholder="Электронная почта" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+
+</body>
+</html>

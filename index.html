@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Твое имя">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как списать без палева</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для навигации */
+        nav {
+            background-color: #333;
+            padding: 10px 0; /* Добавляем отступ сверху и снизу */
+            display: flex;
+            justify-content: center; /* Центрируем меню */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px; /* Расстояние между элементами */
+        }
+
+        nav li {
+            position: relative; /* Для выпадающего меню */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px; /* Увеличиваем зону клика */
+            display: block;
+            font-size: 16px; /* Устанавливаем единый размер текста */
+            border-radius: 4px; /* Легкое скругление */
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Стили для выпадающего меню */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 160px;
+            border-radius: 4px; /* Скругление углов */
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!---->
+    <!-- Навигация -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="consultations.html">Консультации</a></li>
+                <li><a href="tariffs.html">Тарифы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Регистрация</a>
+                    <div class="dropdown-content">
+                        <a href="Registr.html">Зарегистрироваться</a>
+                        <a href="login.html">Войти</a>
+                        <li><a href="fetch.html">Fetch</a></li>
+                        <li><a href="rgb.html">RGB</a></li>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main></br></br>
+        <!-- Введение -->
+        <section class="intro">
+            <h1>Добро пожаловать на сайт "Как списать без палева"!</h1>
+            <p>Мы предлагаем уникальные советы, тарифные планы и консультации, которые помогут вам решить учебные проблемы. Узнайте, как списывать умело и незаметно!</p>
+        </section>
+
+        <!-- Тарифы -->
+        <section class="tariffs">
+            <h2>Наши тарифные планы</h2>
+            <p>Выберите подходящий план для ваших нужд:</p>
+            <ul>
+                <li>
+                   <h3>Базовый</h3>
+                    <p>Доступ к бесплатным статьям и видеоруководствам. Идеально для начинающих!</p>
+                    <p><strong>Цена: 500 руб.</strong></p>
+                    <a href="tariffs.html" class="tariff-btn">Подробнее</a>
+                </li>
+                <li>
+                    <h3>Профессионал</h3>
+                    <p>Полный доступ ко всем материалам и видео. Получите все самые эффективные методы!</p>
+                    <p><strong>Цена: 1500 руб.</strong></p>
+                    <a href="tariffs.html" class="tariff-btn">Подробнее</a>
+                </li>
+                <li>
+                    <h3>Эксперт</h3>
+                    <p>Персонализированные консультации, тайм-менеджмент и помощь на экзаменах!</p>
+                    <p><strong>Цена: 3000 руб.</strong></p>
+                    <a href="tariffs.html" class="tariff-btn">Подробнее</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Консультации -->
+        <section class="consultation">
+            <h2>Консультации</h2>
+            <p>Нужна помощь в подготовке к экзаменам или решении учебных задач? Наши эксперты готовы помочь вам с любыми вопросами!</p>
+            <a href="consultations.html" class="tariff-btn">Записаться на консультацию</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Как списать без палева. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
